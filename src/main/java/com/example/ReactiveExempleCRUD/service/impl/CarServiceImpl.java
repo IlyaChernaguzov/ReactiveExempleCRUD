@@ -55,6 +55,6 @@ public class CarServiceImpl implements CarService {
     public Flux<CarDto> getAllCars(){
         return carRepository.findAll()
                 .map(car -> new CarDto(car.getId(), car.getBrand(), car.getKilowatt()))
-                .switchIfEmpty(Mono.error(new AppException(EnumException.NOT_FOUND)));//TODO: справь dfdsfdsf dsfsdfsf
+                .switchIfEmpty(Mono.error(new AppException(EnumException.NOT_FOUND)));//TODO: справь dfdsfdsf dsfsdfsf sdfsdfsdfsdf
     }
 }
