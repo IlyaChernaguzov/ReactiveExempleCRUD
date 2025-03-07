@@ -56,5 +56,7 @@ public class CarServiceImpl implements CarService {
         return carRepository.findAll()
                 .map(car -> new CarDto(car.getId(), car.getBrand(), car.getKilowatt()))
                 .switchIfEmpty(Mono.error(new AppException(EnumException.NOT_FOUND)));//TODO: справь dfdsfdsf dsfsdfsf
+
+        //TODO:vgdfgfdg
     }
 }
